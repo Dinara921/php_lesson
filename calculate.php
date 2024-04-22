@@ -55,7 +55,7 @@ class Calculate extends abstract_Calculate
         }   
         return $factorial;   
     }   
- 
+
     public function Fibonacci()  
     {  
         $f = $this->param1;  
