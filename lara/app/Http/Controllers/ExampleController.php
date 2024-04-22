@@ -11,6 +11,6 @@ class ExampleController extends Controller
         dd($request->all());
         return 'hello';
         //$t = 14/0;
-        return response()->json(['hello' => 'Laravel'], 201);
+        //return response()->json(['hello' => 'Laravel'], 201);
     }
 }
