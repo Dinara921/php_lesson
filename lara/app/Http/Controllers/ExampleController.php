@@ -6,9 +6,11 @@ use Illuminate\Http\Request;
 
 class ExampleController extends Controller
 {
-    public function test()
+    public function test(Request $request)
     {
-        $t = 14/0;
+        dd($request->all());
+        return 'hello';
+        //$t = 14/0;
         return response()->json(['hello' => 'Laravel'], 201);
     }
 }
