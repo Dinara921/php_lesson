@@ -45,6 +45,4 @@ class SchoolController extends Controller
           $school->delete();
           return response()->json($school, 204);
     }
-  
-  
 }
