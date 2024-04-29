@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ExampleController;
+use App\Http\Controllers\SchoolController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/hello', [ExampleController::class, 'test']);
 
+Route::post('/school', [SchoolController::class, 'create']);
+
+Route::get('/school/{id}', [SchoolController::class, 'item']);
+
+Route::get('/schools', [SchoolController::class, 'list']);
+
+Route::put('/school/{id}', [SchoolController::class, 'update']);
+
+Route::delete('/school/{id}', [SchoolController::class, 'delete']);
