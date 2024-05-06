@@ -24,7 +24,7 @@ class SchoolController extends Controller
     public function item($id)
     {
         //dd($id);
-        $school = School::findOrFail($id);
+        $school = School::with('students')->findOrFail($id);
         return response()->json($school,200);
     }
     public function list(Request $request)
